@@ -3,9 +3,9 @@ function importAllPictures(pictures) {
     return pictures.keys().map(pictures);
 }
 
-const imagesAppointmentProgram = importAllPictures(require.context("./components/images/projects/appointment-customer-program", false, /\.(png|jp?g)$/));
-const imagesInventoryProgram = importAllPictures(require.context("./components/images/projects/inventory-program", false, /\.(png|jp?g)$/));
-const mooloolabaSite = importAllPictures(require.context("./components/images/projects/mooloolaba-site", false, /\.(png|jp?g)$/));
+const imagesAppointmentProgram = importAllPictures(require.context("./components/images/projects/appointment-customer-program/", false, /\d+.+\.(png|jp?g)$/));
+const imagesInventoryProgram = importAllPictures(require.context("./components/images/projects/inventory-program/", false, /\d+.+\.(png|jp?g)$/));
+const imagesmooloolabaSite = importAllPictures(require.context("./components/images/projects/mooloolaba-site/", false, /\d+.+\.(png|jp?g)$/));
 
 
 const descsAppointmentProgram = [
@@ -54,3 +54,14 @@ const descsMooloolabaSite = [
     "This graph shows all of the different temperatures throughout each month for 2017 and 2018.",
     "The data was stored in CSV format. missing values were stored as -99.9. This is the code I created to fill in the missing gaps. In other contexts, removing the value would be a better choice. In this context, I believe finding the average between the surrounding rows produces a better result.", 
 ]
+
+
+module.exports = {
+    imagesAppointmentProgram: imagesAppointmentProgram,
+    imagesInventoryProgram: imagesInventoryProgram,
+    imagesmooloolabaSite: imagesmooloolabaSite,
+
+    descsAppointmentProgram: descsAppointmentProgram,
+    descsInventoryProgram: descsInventoryProgram,
+    descsMooloolabaSite: descsMooloolabaSite
+}

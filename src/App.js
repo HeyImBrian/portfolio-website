@@ -15,11 +15,11 @@ function App() {
 
 
   function nextImg(project) {
-    project.getNextCurrIndexValues();
+    return project.getNextCurrIndexValues();
   }
 
   function prevImg(project) {
-    project.getPrevCurrIndexValues();
+    return project.getPrevCurrIndexValues();
   }
 
 
@@ -31,9 +31,9 @@ function App() {
       <div className="contentContainerBorder">
           <div className="innerContent">
 
-            <ContentContainer software={appointmentProgram} nextImgFunc={nextImg} prevImgFunc={prevImg}/>
-            <ContentContainer software={inventoryProgram} nextImgFunc={nextImg} prevImgFunc={prevImg} />
-            <ContentContainer software={mooloolabaWebsite} nextImgFunc={nextImg} prevImgFunc={prevImg} />
+            <ContentContainer imgDescClass={appointmentProgram} nextImgFunc={nextImg} prevImgFunc={prevImg}/>
+            <ContentContainer imgDescClass={inventoryProgram} nextImgFunc={nextImg} prevImgFunc={prevImg} />
+            <ContentContainer imgDescClass={mooloolabaWebsite} nextImgFunc={nextImg} prevImgFunc={prevImg} />
 
           </div>
       </div>

@@ -1,8 +1,13 @@
+import Button from "./Button.js"
 
-const ImageContainer = () => {
+import { useState } from "react"
+
+const ImageContainer = ({ imgDescClass, prevImgFunc, nextImgFunc }) => {
   return (
   <div>
-
+    <img src={imgDescClass.getCurrImgDesc()[0]}></img>
+    <Button buttonText="< Previous" />
+    <Button buttonText="Next >" />
   </div>
   )
 };

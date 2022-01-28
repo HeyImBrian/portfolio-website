@@ -51,6 +51,12 @@ html, body {
   color: #61dafb;
 }
 
+.innerContentContainer {
+  margin: 10px;
+  padding: 10px;
+  background: greenyellow;
+}
+
 .contentContainerBorder {
   position: absolute;
   overflow: auto;

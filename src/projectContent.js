@@ -10,26 +10,36 @@ class projectContent {
         return this.currIndex;
     }
 
-    getNextCurrIndexValues() {
-        this.currIndex += 1
+    getCurrImgDesc() {
+        return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
+    }
 
-        if (this.currIndex < this.maxIndex){
-            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
-        } else {
+    getNextCurrIndexValues() {
+        this.currIndex += 1;
+
+        if (this.currIndex > this.maxIndex){
             this.currIndex -= 1;
-            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
         }
+        // if (this.currIndex < this.maxIndex){
+        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
+        // } else {
+        //     this.currIndex -= 1;
+        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
+        // }
     }
 
     getPrevCurrIndexValues() {
-        this.currIndex -= 1
+        this.currIndex -= 1;
         
-        if (this.currIndex < this.maxIndex){
-            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
-        } else {
+        if (this.currIndex < 0){
             this.currIndex += 1;
-            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
         }
+        // if (this.currIndex < this.maxIndex){
+        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
+        // } else {
+        //     this.currIndex += 1;
+        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
+        // }
     }
 
     getImgs() {

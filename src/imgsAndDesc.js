@@ -3,9 +3,9 @@ function importAllPictures(pictures) {
     return pictures.keys().map(pictures);
 }
 
-const imagesAppointmentProgram = importAllPictures(require.context("./components/images/projects/appointment-customer-program/", false, /\d+.+\.(png|jp?g)$/));
-const imagesInventoryProgram = importAllPictures(require.context("./components/images/projects/inventory-program/", false, /\d+.+\.(png|jp?g)$/));
-const imagesmooloolabaSite = importAllPictures(require.context("./components/images/projects/mooloolaba-site/", false, /\d+.+\.(png|jp?g)$/));
+const imagesAppointmentProgram = importAllPictures(require.context("./components/images/projects/appointment-customer-program/", false, /\d+.+\.(png)$/));
+const imagesInventoryProgram = importAllPictures(require.context("./components/images/projects/inventory-program/", false, /\d+.+\.(png)$/));
+const imagesmooloolabaSite = importAllPictures(require.context("./components/images/projects/mooloolaba-site/", false, /\d+.+\.(png)$/));
 
 
 const descsAppointmentProgram = [

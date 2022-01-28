@@ -1,9 +1,9 @@
 import ImageContainer from "./ImageContainer";
 
-const ContentContainer = ({ imgDescClass, nextImgFunc, prevImgFunc }) => {
+const ContentContainer = ({ imgDescClass }) => {
   return (
     <div className="innerContentContainer">
-      <ImageContainer imgDescClass={imgDescClass} nextImgFunc={nextImgFunc} prevImgFunc={prevImgFunc} />
+      <ImageContainer imgDescClass={imgDescClass} />
     </div>
   );
 };

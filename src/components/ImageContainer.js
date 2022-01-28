@@ -2,12 +2,27 @@ import Button from "./Button.js"
 
 import { useState } from "react"
 
-const ImageContainer = ({ imgDescClass, prevImgFunc, nextImgFunc }) => {
+const ImageContainer = ({ imgDescClass }) => {
+
+  const [imgDesc, setImgDesc] = useState(imgDescClass.getCurrImgDesc());
+
+
+  function prev() {
+    setImgDesc(imgDescClass.getPrevCurrIndexValues());
+  }
+
+  function next() {
+    setImgDesc(imgDescClass.getNextCurrIndexValues());
+  }
+
+
+
   return (
   <div>
-    <img src={imgDescClass.getCurrImgDesc()[0]}></img>
-    <Button buttonText="< Previous" />
-    <Button buttonText="Next >" />
+    <img src={imgDesc[0]}></img>
+    <h4>{imgDesc[1]}</h4>
+    <Button buttonText="< Previous" pressed={prev} />
+    <Button buttonText="Next >" pressed={next} />
   </div>
   )
 };

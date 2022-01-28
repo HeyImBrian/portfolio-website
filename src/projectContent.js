@@ -3,7 +3,8 @@ class projectContent {
         this.imgs = imgs;
         this.desc = desc;
         this.currIndex = 0;
-        this.maxIndex = imgs.length;
+        this.maxIndex = imgs.length - 1;
+        console.log("CONSTRUCTED");
     }
 
     getCurrIndex() {
@@ -15,31 +16,21 @@ class projectContent {
     }
 
     getNextCurrIndexValues() {
-        this.currIndex += 1;
-
-        if (this.currIndex > this.maxIndex){
-            this.currIndex -= 1;
+        if (this.currIndex === this.maxIndex){
+            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
+        } else {
+            this.currIndex += 1;
+            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
         }
-        // if (this.currIndex < this.maxIndex){
-        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
-        // } else {
-        //     this.currIndex -= 1;
-        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
-        // }
     }
 
     getPrevCurrIndexValues() {
-        this.currIndex -= 1;
-        
-        if (this.currIndex < 0){
-            this.currIndex += 1;
+        if (this.currIndex === 0){
+            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
+        } else {
+            this.currIndex -= 1;
+            return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
         }
-        // if (this.currIndex < this.maxIndex){
-        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
-        // } else {
-        //     this.currIndex += 1;
-        //     return [this.getImgs()[this.currIndex], this.getDesc()[this.currIndex]];
-        // }
     }
 
     getImgs() {

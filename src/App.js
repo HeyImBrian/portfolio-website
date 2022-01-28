@@ -14,26 +14,15 @@ function App() {
   const mooloolabaWebsite = new projectContent(imgDesc.imagesmooloolabaSite, imgDesc.descsMooloolabaSite);
 
 
-  function nextImg(project) {
-    return project.getNextCurrIndexValues();
-  }
-
-  function prevImg(project) {
-    return project.getPrevCurrIndexValues();
-  }
-
-
-
-
   return (
     <div className="backgroundImg">
       <img src={myName} className="myName" alt="Brian St. Germain" />
       <div className="contentContainerBorder">
           <div className="innerContent">
 
-            <ContentContainer imgDescClass={appointmentProgram} nextImgFunc={nextImg} prevImgFunc={prevImg}/>
-            <ContentContainer imgDescClass={inventoryProgram} nextImgFunc={nextImg} prevImgFunc={prevImg} />
-            <ContentContainer imgDescClass={mooloolabaWebsite} nextImgFunc={nextImg} prevImgFunc={prevImg} />
+            <ContentContainer imgDescClass={appointmentProgram} />
+            <ContentContainer imgDescClass={inventoryProgram} />
+            <ContentContainer imgDescClass={mooloolabaWebsite} />
 
           </div>
       </div>

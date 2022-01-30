@@ -7,7 +7,8 @@ const imagesAppointmentProgram = importAllPictures(require.context("./components
 const imagesInventoryProgram = importAllPictures(require.context("./components/images/projects/inventory-program/", false, /\d+.+\.(png)$/));
 const imagesmooloolabaSite = importAllPictures(require.context("./components/images/projects/mooloolaba-site/", false, /\d+.+\.(png)$/));
 
-
+const overviewAppointmentProgram = ["Appointment Scheduler", "This program allows an employee to log in using their stored credentials. Once logged in, the employee can create, read, update, and delete customers and appointments. Data is stored in a mySQL database."];
+const linkAppointmentProgram = "https://github.com/HeyImBrian/appointment-scheduler"
 const descsAppointmentProgram = [
     "This is the form that users use to log in. The username and password is checked using an SQL query to check the mySQL database.", 
     "Input validation is used to tell the user why the log in didn't work.", 
@@ -31,6 +32,8 @@ const descsAppointmentProgram = [
     "A log of log in activity is saved.", 
 ]
 
+const overviewInventoryProgram = ["Inventory Manangement", "This program allows a user to create, read, update, and delete parts and products. Each product is composed of at least one part."];
+const linkInventoryProgram = "https://github.com/HeyImBrian/inventory-software"
 const descsInventoryProgram = [
     "This is the main page of the inventory program. The parts and the products tables can be seen at the same time. Both tables have search bars and add, modify, and delete buttons.", 
     "Demonstrating searching by name, and searching by ID.", 
@@ -45,6 +48,8 @@ const descsInventoryProgram = [
     "The modify product autofills the product information and allows the user to change the values.", 
 ]
 
+const overviewMooloolabaSite = ["Temperature Prediction Website", "A website that uses machine learning to predict the water temperature of Australia's Mooloolaba bay for a given date and time. Several graphs are shown to get a better idea of how date and time has an impact on the bay's water temperature."];
+const linkMooloolabaSite = "https://github.com/HeyImBrian/MooloolabaWaves"
 const descsMooloolabaSite = [
     "Date picker", 
     "Time picker", 
@@ -56,7 +61,16 @@ const descsMooloolabaSite = [
 ]
 
 
+
+
 module.exports = {
+    overviewAppointmentProgram: overviewAppointmentProgram,
+    linkAppointmentProgram : linkAppointmentProgram ,    
+    overviewInventoryProgram: overviewInventoryProgram,
+    linkInventoryProgram: linkInventoryProgram,
+    overviewMooloolabaSite: overviewMooloolabaSite,
+    linkMooloolabaSite: linkMooloolabaSite,
+
     imagesAppointmentProgram: imagesAppointmentProgram,
     imagesInventoryProgram: imagesInventoryProgram,
     imagesmooloolabaSite: imagesmooloolabaSite,

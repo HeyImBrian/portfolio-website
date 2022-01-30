@@ -9,9 +9,9 @@ import './App.css';
 
 function App() {
 
-  const appointmentProgram = new projectContent(imgDesc.imagesAppointmentProgram, imgDesc.descsAppointmentProgram);
-  const inventoryProgram = new projectContent(imgDesc.imagesInventoryProgram, imgDesc.descsInventoryProgram);
-  const mooloolabaWebsite = new projectContent(imgDesc.imagesmooloolabaSite, imgDesc.descsMooloolabaSite);
+  const appointmentProgram = new projectContent(imgDesc.imagesAppointmentProgram, imgDesc.descsAppointmentProgram, imgDesc.overviewAppointmentProgram, imgDesc.linkAppointmentProgram);
+  const inventoryProgram = new projectContent(imgDesc.imagesInventoryProgram, imgDesc.descsInventoryProgram, imgDesc.overviewInventoryProgram, imgDesc.linkInventoryProgram);
+  const mooloolabaWebsite = new projectContent(imgDesc.imagesmooloolabaSite, imgDesc.descsMooloolabaSite, imgDesc.overviewMooloolabaSite, imgDesc.linkMooloolabaSite);
 
 
   return (

@@ -1,8 +1,8 @@
 
-const Button = ({ buttonText, pressed }) => {
+const Button = ({ buttonText, pressed, animationClass }) => {
   return (
     <div>
-      <button type="button" onClick={pressed}>{buttonText}</button>
+      <button type="button" onClick={pressed} className={animationClass}>{buttonText}</button>
     </div>
   );
 };

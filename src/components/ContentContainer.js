@@ -3,7 +3,7 @@ import ImageContainer from "./ImageContainer";
 const ContentContainer = ({ imgDescClass }) => {
   return (
     <div className="innerContentContainer">
-      <ImageContainer imgDescClass={imgDescClass} />
+      <ImageContainer className="imageContainer" imgDescClass={imgDescClass} />
     </div>
   );
 };

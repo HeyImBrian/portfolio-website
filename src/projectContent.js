@@ -1,10 +1,11 @@
 class projectContent {
-    constructor(imgs, desc) {
+    constructor(imgs, desc, overview, link) {
         this.imgs = imgs;
         this.desc = desc;
+        this.overview = overview;
+        this.link = link;
         this.currIndex = 0;
         this.maxIndex = imgs.length - 1;
-        console.log("CONSTRUCTED");
     }
 
     getCurrIndex() {

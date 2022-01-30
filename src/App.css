@@ -51,10 +51,26 @@ html, body {
   color: #61dafb;
 }
 
-.innerContentContainer {
-  margin: 10px;
-  padding: 10px;
-  background: greenyellow;
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageContainer {
+  text-align: center;
+  height: 70vh;
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+img {
+  object-fit: contain;
+  height: 45%;
+  width: 100%;
 }
 
 .contentContainerBorder {
@@ -86,16 +102,95 @@ html, body {
   animation-fill-mode: backwards;
 }
 
-button {
-  background-color: yellow;
+.innerContentContainer {
+  margin: 10px;
+  margin-bottom: 10vh;
+
+  border-bottom: 10px solid white;
+
+  padding: 10px;
+  background: transparent;
 }
 
-button:hover {
-  background-color: orange;
+
+
+/* BUTTON STYLE */
+
+button{
+  display:inline-block;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  margin:0em 5em 5em 5em;
+  text-align:center;
+  transition: all 0.2s;
+  background-color: black;
+  padding:0.8em 2.2em;
+  border:0.1em solid #FFFFFF;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-weight:300;
+  color:#FFFFFF;
+  margin:0em 5em 5em 5em;
+  text-align:center;
+  transition: all 0.2s;
+}
+button:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+}
+@media all and (max-width:30em){
+  button{
+    display:block;
+    margin:0.4em auto;
+  }
+}
+.leftBounce:hover {
+  animation-name: bouncyLeft;
+  animation-duration: 4s;
+  position:relative;
 }
 
-button:active {
-  background-color: red;
+.rightBounce:hover {
+  animation-name:bouncyRight;
+  animation-duration: 4s;
+  position:relative;
+}
+
+
+
+
+@media screen and (orientation:portrait) {
+  /* Portrait styles */
+  /*set width to 100px */
+
+}
+@media screen and (orientation:landscape) {
+  /* Landscape styles */
+  /* set width to 200px*/
+
+}
+
+
+
+@keyframes bouncyLeft {
+  0%{left:0em}
+  0%{left:0em}
+  3%{left:-0.9em}
+  6%{left:0em}
+  8%{left:-0.4em}
+  10%{left:0em}
+  100%{left:0em;}
+}
+
+@keyframes bouncyRight {
+  0%{right:0em}
+  0%{right:0em}
+  3%{right:-0.9em}
+  6%{right:0em}
+  8%{right:-0.4em}
+  10%{right:0em}
+  100%{right:0em;}
 }
 
 @keyframes bgImgAnimation {
